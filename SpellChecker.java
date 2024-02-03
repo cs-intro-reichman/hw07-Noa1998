@@ -53,7 +53,7 @@ public class SpellChecker {
 
 		for (int i=0; i<dictionary.length;i++){
 			thresholdRef = levenshtein(word, dictionary[i]);
-			if (thresholdRef <= MinRef){
+			if (thresholdRef < MinRef){
 				MinRef = thresholdRef;
 				if (thresholdRef <= threshold){
 					CloseWord = dictionary[i];
