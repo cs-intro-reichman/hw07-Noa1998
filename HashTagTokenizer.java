@@ -22,7 +22,7 @@ public class HashTagTokenizer {
 	}
 
 	public static boolean existInDictionary(String word, String []dictionary) {
-		word = lowerCase(word);
+		word = lowerCase(word); // #feedback - you can use String's toLowerCase.
 		for (int i=0; i<dictionary.length; i++){
 			if (word.equals(dictionary[i])){
 				return true;
@@ -60,7 +60,9 @@ public class HashTagTokenizer {
 			SS = hashtag.substring(0, i);
 			if (existInDictionary(SS, dictionary)){
 				System.out.println(SS);
+				// #feedback - note that SS.length() is i
 				breakHashTag(hashtag.substring(SS.length(), N), dictionary);
+				// #feedback - you should break from the for loop here.
 			} 
 				
 			}
