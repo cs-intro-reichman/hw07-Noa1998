@@ -47,7 +47,7 @@ public class SpellChecker {
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
 		// Your code goes here
-		int MinRef = 20;
+		int MinRef = 20; // #feedback - variable name should start lower case.
 		int thresholdRef;
 		String CloseWord = "";
 
